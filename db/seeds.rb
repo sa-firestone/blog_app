@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 post = Post.create(title: 'Success!',
                   body: %(Lorem Khaled Ipsum is a major key to success.
                          Put it this way, it took me twenty five years to get these plants,

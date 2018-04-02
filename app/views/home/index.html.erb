@@ -1,11 +1,24 @@
-<h1>Hello, welcome to the blog!</h1>
-It is now <%= Time.now %> GMT (You figure it out).
+<h1 align="center">Hello, welcome to the blog!</h1>
+
+
+<p id="notice" align="center">It is now <%= Time.now %> GMT (You figure it out).<%= notice %></p><br><br>
+
+<table align="center">
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td width="10"></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <br><br>
 
-<h2><u>List of Posts</u></h2>
-<div>
-    <ol>
-        <li><%= @posts.title %></li>
-        <li><%= @posts.body %></li>
-    </ol>
+<div align="center">
+    <%= link_to 'New Post', new_post_path %>
 </div>

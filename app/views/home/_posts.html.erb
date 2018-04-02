@@ -1,0 +1,12 @@
+<%= div_for(posts) do %>
+    <p>Updated <%= time_ago_in_words posts.updated_at %> ago.
+    <p>Created <%= time_ago_in_words posts.created_at %> ago.
+
+    <%= form_for posts do |p| %>
+    <div class="field">
+        <%= p.text_field :title %>
+    </div>
+        <%= p.submit %>
+    <% end %>
+    <br>
+<% end %>
